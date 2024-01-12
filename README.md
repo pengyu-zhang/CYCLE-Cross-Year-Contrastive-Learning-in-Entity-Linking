@@ -19,7 +19,7 @@ Please follow the instructions next to reproduce our experiments, and to train a
 Creating a new environment (e.g. with `conda`) is recommended. Use `requirements.txt` to install the dependencies:
 
 ```
-conda create -n tiger39 -y python=3.9 && conda activate tiger39
+conda create -n gclel311 -y python=3.11 && conda activate gclel311
 pip install -r requirements.txt
 ```
 
