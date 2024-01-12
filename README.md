@@ -1,6 +1,6 @@
 # TIGER-Temporally-Improved-Graph-Entity-Linker
 
-The implementation of our approach is based on the original codebase [BLINK](https://github.com/facebookresearch/BLINK) and [AM-GCN](https://github.com/zhumeiqiBUPT/AM-GCN).<br>
+The implementation of our approach is based on the original codebase [BLINK](https://github.com/facebookresearch/BLINK) and [HeCo](https://github.com/liun-online/HeCo).<br>
 
 <br><br>
 <div align="center">
@@ -8,7 +8,7 @@ The implementation of our approach is based on the original codebase [BLINK](htt
 </div>
 <br><br>
 
-In this work, we introduce TIGER: a Temporally Improved Graph Entity Linker. By incorporating structural information between entities into the model, we enhance the learned representation, making entities more distinguishable over time. The core idea is to integrate graph-based information onto text-based information, from which both distinct and shared embeddings based on an entities' feature and structural relationships and their interaction. Experiments on three datasets, show that our model can effectively prevent temporal degradation, demonstrating a 2.55% performance boost over a strong baseline when the time gap is one year, and an improvement to 18.83% as the interval expands to nine years.
+In this work, XXX. Knowledge graphs evolve annually with new entities emerging, existing definitions being revised, and relationships between entities changing. These changes can lead to temporal degradation in models, a phenomenon where model performance diminishes over time, especially when handling downstream tasks like entity linking. Recent studies show that nodes with higher connectivity degrees tend to be more resistant to temporal degradation, so-called structural unfairness. To address this problem, we introduce XXX model. We employ graph contrastive learning to enhance performance for low-degree nodes, thereby alleviating the impact of temporal degradation. The idea is to combine graph contrastive learning with text-based information. Leverage the characteristics of temporal data to construct a cross-year contrastive mechanism, using newly added relationships in each year's data as positive samples and newly removed relationships as negative samples.
 
 ## Usage
 
