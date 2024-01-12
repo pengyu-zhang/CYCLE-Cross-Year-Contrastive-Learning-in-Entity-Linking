@@ -339,7 +339,7 @@ train.sh
     <td class="tg-c3ow">5.72%</td>
   </tr>
   <tr>
-    <td class="tg-c3ow" colspan="12">Forward and Backward   </td>
+    <th class="tg-c3ow" colspan="12">Forward and Backward</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@1</td>
