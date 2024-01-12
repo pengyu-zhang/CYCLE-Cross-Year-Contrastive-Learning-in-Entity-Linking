@@ -87,16 +87,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">3.50\%</td>
-    <td class="tg-c3ow">4.30\%</td>
-    <td class="tg-c3ow">4.64\%</td>
-    <td class="tg-c3ow">4.20\%</td>
-    <td class="tg-c3ow">4.99\%</td>
-    <td class="tg-c3ow">6.04\%</td>
-    <td class="tg-c3ow">7.14\%</td>
-    <td class="tg-c3ow">8.79\%</td>
-    <td class="tg-c3ow">15.79\%</td>
-    <td class="tg-c3ow">21.47\%</td>
+    <td class="tg-c3ow">3.50%</td>
+    <td class="tg-c3ow">4.30%</td>
+    <td class="tg-c3ow">4.64%</td>
+    <td class="tg-c3ow">4.20%</td>
+    <td class="tg-c3ow">4.99%</td>
+    <td class="tg-c3ow">6.04%</td>
+    <td class="tg-c3ow">7.14%</td>
+    <td class="tg-c3ow">8.79%</td>
+    <td class="tg-c3ow">15.79%</td>
+    <td class="tg-c3ow">21.47%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@2</td>
@@ -127,16 +127,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">3.03\%</td>
-    <td class="tg-c3ow">3.82\%</td>
-    <td class="tg-c3ow">4.01\%</td>
-    <td class="tg-c3ow">3.48\%</td>
-    <td class="tg-c3ow">4.17\%</td>
-    <td class="tg-c3ow">5.37\%</td>
-    <td class="tg-c3ow">6.36\%</td>
-    <td class="tg-c3ow">7.34\%</td>
-    <td class="tg-c3ow">13.86\%</td>
-    <td class="tg-c3ow">19.62\%</td>
+    <td class="tg-c3ow">3.03%</td>
+    <td class="tg-c3ow">3.82%</td>
+    <td class="tg-c3ow">4.01%</td>
+    <td class="tg-c3ow">3.48%</td>
+    <td class="tg-c3ow">4.17%</td>
+    <td class="tg-c3ow">5.37%</td>
+    <td class="tg-c3ow">6.36%</td>
+    <td class="tg-c3ow">7.34%</td>
+    <td class="tg-c3ow">13.86%</td>
+    <td class="tg-c3ow">19.62%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@4</td>
@@ -167,16 +167,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">2.59\%</td>
-    <td class="tg-c3ow">3.63\%</td>
-    <td class="tg-c3ow">3.43\%</td>
-    <td class="tg-c3ow">3.34\%</td>
-    <td class="tg-c3ow">3.68\%</td>
-    <td class="tg-c3ow">3.94\%</td>
-    <td class="tg-c3ow">5.17\%</td>
-    <td class="tg-c3ow">6.07\%</td>
-    <td class="tg-c3ow">11.49\%</td>
-    <td class="tg-c3ow">16.94\%</td>
+    <td class="tg-c3ow">2.59%</td>
+    <td class="tg-c3ow">3.63%</td>
+    <td class="tg-c3ow">3.43%</td>
+    <td class="tg-c3ow">3.34%</td>
+    <td class="tg-c3ow">3.68%</td>
+    <td class="tg-c3ow">3.94%</td>
+    <td class="tg-c3ow">5.17%</td>
+    <td class="tg-c3ow">6.07%</td>
+    <td class="tg-c3ow">11.49%</td>
+    <td class="tg-c3ow">16.94%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@8</td>
@@ -207,16 +207,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">2.06\%</td>
-    <td class="tg-c3ow">2.82\%</td>
-    <td class="tg-c3ow">2.56\%</td>
-    <td class="tg-c3ow">2.57\%</td>
-    <td class="tg-c3ow">2.98\%</td>
-    <td class="tg-c3ow">4.01\%</td>
-    <td class="tg-c3ow">4.38\%</td>
-    <td class="tg-c3ow">5.06\%</td>
-    <td class="tg-c3ow">9.41\%</td>
-    <td class="tg-c3ow">13.37\%</td>
+    <td class="tg-c3ow">2.06%</td>
+    <td class="tg-c3ow">2.82%</td>
+    <td class="tg-c3ow">2.56%</td>
+    <td class="tg-c3ow">2.57%</td>
+    <td class="tg-c3ow">2.98%</td>
+    <td class="tg-c3ow">4.01%</td>
+    <td class="tg-c3ow">4.38%</td>
+    <td class="tg-c3ow">5.06%</td>
+    <td class="tg-c3ow">9.41%</td>
+    <td class="tg-c3ow">13.37%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@16</td>
@@ -247,16 +247,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.66\%</td>
-    <td class="tg-c3ow">2.25\%</td>
-    <td class="tg-c3ow">2.12\%</td>
-    <td class="tg-c3ow">2.02\%</td>
-    <td class="tg-c3ow">2.47\%</td>
-    <td class="tg-c3ow">3.04\%</td>
-    <td class="tg-c3ow">3.56\%</td>
-    <td class="tg-c3ow">3.92\%</td>
-    <td class="tg-c3ow">7.31\%</td>
-    <td class="tg-c3ow">10.87\%</td>
+    <td class="tg-c3ow">1.66%</td>
+    <td class="tg-c3ow">2.25%</td>
+    <td class="tg-c3ow">2.12%</td>
+    <td class="tg-c3ow">2.02%</td>
+    <td class="tg-c3ow">2.47%</td>
+    <td class="tg-c3ow">3.04%</td>
+    <td class="tg-c3ow">3.56%</td>
+    <td class="tg-c3ow">3.92%</td>
+    <td class="tg-c3ow">7.31%</td>
+    <td class="tg-c3ow">10.87%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@32</td>
@@ -287,16 +287,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.34\%</td>
-    <td class="tg-c3ow">1.73\%</td>
-    <td class="tg-c3ow">1.79\%</td>
-    <td class="tg-c3ow">1.69\%</td>
-    <td class="tg-c3ow">2.08\%</td>
-    <td class="tg-c3ow">2.40\%</td>
-    <td class="tg-c3ow">2.78\%</td>
-    <td class="tg-c3ow">3.09\%</td>
-    <td class="tg-c3ow">5.68\%</td>
-    <td class="tg-c3ow">8.06\%</td>
+    <td class="tg-c3ow">1.34%</td>
+    <td class="tg-c3ow">1.73%</td>
+    <td class="tg-c3ow">1.79%</td>
+    <td class="tg-c3ow">1.69%</td>
+    <td class="tg-c3ow">2.08%</td>
+    <td class="tg-c3ow">2.40%</td>
+    <td class="tg-c3ow">2.78%</td>
+    <td class="tg-c3ow">3.09%</td>
+    <td class="tg-c3ow">5.68%</td>
+    <td class="tg-c3ow">8.06%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@64</td>
@@ -327,16 +327,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.11\%</td>
-    <td class="tg-c3ow">1.32\%</td>
-    <td class="tg-c3ow">1.33\%</td>
-    <td class="tg-c3ow">1.24\%</td>
-    <td class="tg-c3ow">1.60\%</td>
-    <td class="tg-c3ow">1.84\%</td>
-    <td class="tg-c3ow">1.84\%</td>
-    <td class="tg-c3ow">1.97\%</td>
-    <td class="tg-c3ow">3.89\%</td>
-    <td class="tg-c3ow">5.72\%</td>
+    <td class="tg-c3ow">1.11%</td>
+    <td class="tg-c3ow">1.32%</td>
+    <td class="tg-c3ow">1.33%</td>
+    <td class="tg-c3ow">1.24%</td>
+    <td class="tg-c3ow">1.60%</td>
+    <td class="tg-c3ow">1.84%</td>
+    <td class="tg-c3ow">1.84%</td>
+    <td class="tg-c3ow">1.97%</td>
+    <td class="tg-c3ow">3.89%</td>
+    <td class="tg-c3ow">5.72%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" colspan="12">Forward and Backward   </td>
@@ -370,16 +370,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">3.50\%</td>
-    <td class="tg-c3ow">3.14\%</td>
-    <td class="tg-c3ow">2.94\%</td>
-    <td class="tg-c3ow">3.16\%</td>
-    <td class="tg-c3ow">3.50\%</td>
-    <td class="tg-c3ow">4.27\%</td>
-    <td class="tg-c3ow">4.72\%</td>
-    <td class="tg-c3ow">6.34\%</td>
-    <td class="tg-c3ow">8.83\%</td>
-    <td class="tg-c3ow">10.42\%</td>
+    <td class="tg-c3ow">3.50%</td>
+    <td class="tg-c3ow">3.14%</td>
+    <td class="tg-c3ow">2.94%</td>
+    <td class="tg-c3ow">3.16%</td>
+    <td class="tg-c3ow">3.50%</td>
+    <td class="tg-c3ow">4.27%</td>
+    <td class="tg-c3ow">4.72%</td>
+    <td class="tg-c3ow">6.34%</td>
+    <td class="tg-c3ow">8.83%</td>
+    <td class="tg-c3ow">10.42%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@2</td>
@@ -410,16 +410,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">3.03\%</td>
-    <td class="tg-c3ow">2.62\%</td>
-    <td class="tg-c3ow">2.50\%</td>
-    <td class="tg-c3ow">2.58\%</td>
-    <td class="tg-c3ow">2.93\%</td>
-    <td class="tg-c3ow">3.80\%</td>
-    <td class="tg-c3ow">4.45\%</td>
-    <td class="tg-c3ow">5.35\%</td>
-    <td class="tg-c3ow">7.63\%</td>
-    <td class="tg-c3ow">9.01\%</td>
+    <td class="tg-c3ow">3.03%</td>
+    <td class="tg-c3ow">2.62%</td>
+    <td class="tg-c3ow">2.50%</td>
+    <td class="tg-c3ow">2.58%</td>
+    <td class="tg-c3ow">2.93%</td>
+    <td class="tg-c3ow">3.80%</td>
+    <td class="tg-c3ow">4.45%</td>
+    <td class="tg-c3ow">5.35%</td>
+    <td class="tg-c3ow">7.63%</td>
+    <td class="tg-c3ow">9.01%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@4</td>
@@ -450,16 +450,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">2.59\%</td>
-    <td class="tg-c3ow">2.46\%</td>
-    <td class="tg-c3ow">1.98\%</td>
-    <td class="tg-c3ow">2.45\%</td>
-    <td class="tg-c3ow">2.59\%</td>
-    <td class="tg-c3ow">2.79\%</td>
-    <td class="tg-c3ow">3.56\%</td>
-    <td class="tg-c3ow">4.25\%</td>
-    <td class="tg-c3ow">6.25\%</td>
-    <td class="tg-c3ow">7.41\%</td>
+    <td class="tg-c3ow">2.59%</td>
+    <td class="tg-c3ow">2.46%</td>
+    <td class="tg-c3ow">1.98%</td>
+    <td class="tg-c3ow">2.45%</td>
+    <td class="tg-c3ow">2.59%</td>
+    <td class="tg-c3ow">2.79%</td>
+    <td class="tg-c3ow">3.56%</td>
+    <td class="tg-c3ow">4.25%</td>
+    <td class="tg-c3ow">6.25%</td>
+    <td class="tg-c3ow">7.41%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@8</td>
@@ -490,16 +490,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">2.06\%</td>
-    <td class="tg-c3ow">1.87\%</td>
-    <td class="tg-c3ow">1.57\%</td>
-    <td class="tg-c3ow">1.72\%</td>
-    <td class="tg-c3ow">2.00\%</td>
-    <td class="tg-c3ow">2.52\%</td>
-    <td class="tg-c3ow">2.97\%</td>
-    <td class="tg-c3ow">3.70\%</td>
-    <td class="tg-c3ow">5.07\%</td>
-    <td class="tg-c3ow">5.59\%</td>
+    <td class="tg-c3ow">2.06%</td>
+    <td class="tg-c3ow">1.87%</td>
+    <td class="tg-c3ow">1.57%</td>
+    <td class="tg-c3ow">1.72%</td>
+    <td class="tg-c3ow">2.00%</td>
+    <td class="tg-c3ow">2.52%</td>
+    <td class="tg-c3ow">2.97%</td>
+    <td class="tg-c3ow">3.70%</td>
+    <td class="tg-c3ow">5.07%</td>
+    <td class="tg-c3ow">5.59%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@16</td>
@@ -530,16 +530,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.66\%</td>
-    <td class="tg-c3ow">1.56\%</td>
-    <td class="tg-c3ow">1.29\%</td>
-    <td class="tg-c3ow">1.45\%</td>
-    <td class="tg-c3ow">1.58\%</td>
-    <td class="tg-c3ow">1.99\%</td>
-    <td class="tg-c3ow">2.39\%</td>
-    <td class="tg-c3ow">2.81\%</td>
-    <td class="tg-c3ow">3.83\%</td>
-    <td class="tg-c3ow">4.47\%</td>
+    <td class="tg-c3ow">1.66%</td>
+    <td class="tg-c3ow">1.56%</td>
+    <td class="tg-c3ow">1.29%</td>
+    <td class="tg-c3ow">1.45%</td>
+    <td class="tg-c3ow">1.58%</td>
+    <td class="tg-c3ow">1.99%</td>
+    <td class="tg-c3ow">2.39%</td>
+    <td class="tg-c3ow">2.81%</td>
+    <td class="tg-c3ow">3.83%</td>
+    <td class="tg-c3ow">4.47%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@32</td>
@@ -570,16 +570,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.34\%</td>
-    <td class="tg-c3ow">1.25\%</td>
-    <td class="tg-c3ow">1.13\%</td>
-    <td class="tg-c3ow">1.28\%</td>
-    <td class="tg-c3ow">1.40\%</td>
-    <td class="tg-c3ow">1.46\%</td>
-    <td class="tg-c3ow">1.90\%</td>
-    <td class="tg-c3ow">2.26\%</td>
-    <td class="tg-c3ow">2.94\%</td>
-    <td class="tg-c3ow">3.27\%</td>
+    <td class="tg-c3ow">1.34%</td>
+    <td class="tg-c3ow">1.25%</td>
+    <td class="tg-c3ow">1.13%</td>
+    <td class="tg-c3ow">1.28%</td>
+    <td class="tg-c3ow">1.40%</td>
+    <td class="tg-c3ow">1.46%</td>
+    <td class="tg-c3ow">1.90%</td>
+    <td class="tg-c3ow">2.26%</td>
+    <td class="tg-c3ow">2.94%</td>
+    <td class="tg-c3ow">3.27%</td>
   </tr>
   <tr>
     <td class="tg-c3ow" rowspan="3">@64</td>
@@ -610,16 +610,16 @@ train.sh
   </tr>
   <tr>
     <td class="tg-c3ow">Boost</td>
-    <td class="tg-c3ow">1.11\%</td>
-    <td class="tg-c3ow">0.95\%</td>
-    <td class="tg-c3ow">0.87\%</td>
-    <td class="tg-c3ow">0.95\%</td>
-    <td class="tg-c3ow">1.11\%</td>
-    <td class="tg-c3ow">1.12\%</td>
-    <td class="tg-c3ow">1.19\%</td>
-    <td class="tg-c3ow">1.42\%</td>
-    <td class="tg-c3ow">2.13\%</td>
-    <td class="tg-c3ow">2.52\%</td>
+    <td class="tg-c3ow">1.11%</td>
+    <td class="tg-c3ow">0.95%</td>
+    <td class="tg-c3ow">0.87%</td>
+    <td class="tg-c3ow">0.95%</td>
+    <td class="tg-c3ow">1.11%</td>
+    <td class="tg-c3ow">1.12%</td>
+    <td class="tg-c3ow">1.19%</td>
+    <td class="tg-c3ow">1.42%</td>
+    <td class="tg-c3ow">2.13%</td>
+    <td class="tg-c3ow">2.52%</td>
   </tr>
 </tbody>
 </table>
