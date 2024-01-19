@@ -1,4 +1,4 @@
-# TIGER-Temporally-Improved-Graph-Entity-Linker
+# CYCLE-Cross-Year-Contrastive-Learning-for-structural-fairness-in-Entity-linking
 
 The implementation of our approach is based on the original codebase [BLINK](https://github.com/facebookresearch/BLINK) and [HeCo](https://github.com/liun-online/HeCo).<br>
 
@@ -8,7 +8,7 @@ The implementation of our approach is based on the original codebase [BLINK](htt
 </div>
 <br><br>
 
-In this work, XXX. Knowledge graphs evolve annually with new entities emerging, existing definitions being revised, and relationships between entities changing. These changes can lead to temporal degradation in models, a phenomenon where model performance diminishes over time, especially when handling downstream tasks like entity linking. Recent studies show that nodes with higher connectivity degrees tend to be more resistant to temporal degradation, so-called structural unfairness. To address this problem, we introduce XXX model. We employ graph contrastive learning to enhance performance for low-degree nodes, thereby alleviating the impact of temporal degradation. The idea is to combine graph contrastive learning with text-based information. Leverage the characteristics of temporal data to construct a cross-year contrastive mechanism, using newly added relationships in each year's data as positive samples and newly removed relationships as negative samples.
+Knowledge graphs evolve annually with new entities emerging, existing definitions being revised, and relationships between entities changing. These changes can lead to temporal degradation in models, a phenomenon where model performance declines over time, especially when handling downstream tasks like entity linking. Recent studies show that nodes with lower connectivity degrees tend to be less resistant to temporal degradation, so-called structural unfairness. To address this problem, we introduce CYCLE: Cross-Year Contrastive Learning for structural fairness in Entity-linking model. We employ graph contrastive learning to enhance performance for low-degree nodes, thereby alleviating the impact of temporal degradation. The idea is to combine graph contrastive learning with text-based information. Leverage the characteristics of temporal data to construct a cross-year contrastive mechanism, using newly added relationships in each year's data as positive samples and newly removed relationships as negative samples. This approach shows that our model can effectively alleviate temporal degradation, demonstrating a 4.30% performance boost over a strong baseline when the time gap is one year and an improvement to 21.47% as the interval expands to nine years.
 
 ## Usage
 
@@ -73,7 +73,7 @@ train.sh
     <td class="tg-c3ow">0.1430</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.1380</td>
     <td class="tg-c3ow">0.1397</td>
     <td class="tg-c3ow">0.1401</td>
@@ -113,7 +113,7 @@ train.sh
     <td class="tg-c3ow">0.2115</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.2055</td>
     <td class="tg-c3ow">0.2076</td>
     <td class="tg-c3ow">0.2084</td>
@@ -153,7 +153,7 @@ train.sh
     <td class="tg-c3ow">0.2951</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.2867</td>
     <td class="tg-c3ow">0.2890</td>
     <td class="tg-c3ow">0.2901</td>
@@ -193,7 +193,7 @@ train.sh
     <td class="tg-c3ow">0.3881</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.3797</td>
     <td class="tg-c3ow">0.3822</td>
     <td class="tg-c3ow">0.3831</td>
@@ -233,7 +233,7 @@ train.sh
     <td class="tg-c3ow">0.4850</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.4796</td>
     <td class="tg-c3ow">0.4823</td>
     <td class="tg-c3ow">0.4825</td>
@@ -273,7 +273,7 @@ train.sh
     <td class="tg-c3ow">0.5854</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.5826</td>
     <td class="tg-c3ow">0.5845</td>
     <td class="tg-c3ow">0.5845</td>
@@ -313,7 +313,7 @@ train.sh
     <td class="tg-c3ow">0.6833</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.6817</td>
     <td class="tg-c3ow">0.6828</td>
     <td class="tg-c3ow">0.6824</td>
@@ -356,7 +356,7 @@ train.sh
     <td class="tg-c3ow">0.1349</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.1380</td>
     <td class="tg-c3ow">0.1368</td>
     <td class="tg-c3ow">0.1370</td>
@@ -396,7 +396,7 @@ train.sh
     <td class="tg-c3ow">0.2014</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.2055</td>
     <td class="tg-c3ow">0.2037</td>
     <td class="tg-c3ow">0.2042</td>
@@ -436,7 +436,7 @@ train.sh
     <td class="tg-c3ow">0.2829</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.2867</td>
     <td class="tg-c3ow">0.2845</td>
     <td class="tg-c3ow">0.2849</td>
@@ -476,7 +476,7 @@ train.sh
     <td class="tg-c3ow">0.3749</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.3797</td>
     <td class="tg-c3ow">0.3774</td>
     <td class="tg-c3ow">0.3780</td>
@@ -516,7 +516,7 @@ train.sh
     <td class="tg-c3ow">0.4726</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.4796</td>
     <td class="tg-c3ow">0.4776</td>
     <td class="tg-c3ow">0.4782</td>
@@ -556,7 +556,7 @@ train.sh
     <td class="tg-c3ow">0.5745</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.5826</td>
     <td class="tg-c3ow">0.5803</td>
     <td class="tg-c3ow">0.5810</td>
@@ -596,7 +596,7 @@ train.sh
     <td class="tg-c3ow">0.6737</td>
   </tr>
   <tr>
-    <td class="tg-c3ow">TIGER</td>
+    <td class="tg-c3ow">CYCLE</td>
     <td class="tg-c3ow">0.6817</td>
     <td class="tg-c3ow">0.6795</td>
     <td class="tg-c3ow">0.6800</td>
