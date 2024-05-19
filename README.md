@@ -35,11 +35,27 @@ pip install -r requirements.txt
 ### 3. Reproduce the experiments
 
 ```
-train.sh
+export PYTHONPATH="/code/cycle:$PYTHONPATH"
+python /code/gcl/blink/biencoder/train_biencoder.py \
+ --data_path /code/dataset/01_blink_baseline/blink_format/mix_1764/2013/ \
+ --output_path /models/mix_1764_gcl/2013/biencoder \
+ --learning_rate 1e-05 --num_train_epochs 1 --weight 45 --max_context_length 128 --max_cand_length 128 \
+ --train_batch_size 16 --eval_batch_size 16 --bert_model google/bert_uncased_L-8_H-512_A-8 \
+ --type_optimization all_encoder_layers --data_parallel \
+
+# Get top-64 predictions from Biencoder model on train, valid and test dataset
+export PYTHONPATH="/code/blink:$PYTHONPATH"
+python /code/blink/blink/biencoder/eval_biencoder.py \
+ --path_to_model /models/mix_1764_gcl/2013/biencoder/pytorch_model.bin \
+ --data_path /code/dataset/01_blink_baseline/blink_format/mix_1764/ \
+ --output_path /models/mix_1764_gcl/2013/ \
+ --encode_batch_size 32 --eval_batch_size 32 --top_k 64 --save_topk_result \
+ --bert_model google/bert_uncased_L-8_H-512_A-8 --mode 2013,2014,2015,2016,2017,2018,2019,2020,2021,2022 \
+ --zeshel True --data_parallel \
 ```
 <br><br>
 <div align="center">
-<img src="fig2.png" width="800" />
+<img src="fig2.png" width="700" />
 </div>
 <br><br>
 
