@@ -1,0 +1,14 @@
+torch
+pysolr
+emoji
+regex
+matplotlib
+tqdm
+nltk
+numpy
+segtok
+flair
+transformers
+colorama
+termcolor
+faiss-gpu==1.6.5
