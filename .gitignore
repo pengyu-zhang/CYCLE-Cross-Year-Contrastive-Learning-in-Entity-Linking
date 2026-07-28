@@ -1,0 +1,25 @@
+# Paper PDFs are not distributed with the repository
+*.pdf
+
+# Data and experiment outputs live outside git
+data/raw/
+data/processed/
+data/*.7z
+data/_extract/
+outputs/
+models/
+*.t7
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

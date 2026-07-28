@@ -1,0 +1,77 @@
+# Recommended configuration. Starts from paper.yaml and adds engineering
+# improvements as switches; every default below was settled by one-switch
+# ablations. The paper's core mechanism — cross-year graph contrastive
+# learning with candidate-side graph fusion, jointly optimized — stays
+# active. A no-fusion variant scores slightly higher; it is one switch
+# away (fusion.enabled: false) for users who want maximum recall.
+
+run:
+  seed: 52313
+  output_dir: outputs
+  tf32: true
+  amp: bf16                  # mixed precision (RTX 30+/A100); "off" to disable
+
+data:
+  root: data
+  entity_set: new
+  train_year: 2019
+  max_context_length: 128
+  max_cand_length: 128
+  candidate_include_title: true
+  valid_n: 4096          # cap in-batch validation set (best-epoch selection only)
+  debug_n: null
+
+model:
+  bert_model: google/bert_uncased_L-8_H-512_A-8
+  lowercase: true
+
+graph:
+  enabled: true
+  source: per_year
+  mode: joint
+  hidden_dim: 64
+  feat_drop: 0.3
+  attn_drop: 0.5
+  tau: 0.8
+  neighbor_threshold: 8
+  isolated_fallback: self
+  feature_negatives: all
+  relation_extra_negatives: 0  # Eq.11 negatives are empty in GCL-TempEL; >0 samples extra denominators for L_f
+
+fusion:
+  enabled: true
+  mode: candidate            # y_e' = y_e + P·z_e, applied to the full pool at
+  projection: learned        # inference via QID mapping; zero-initialized P
+  alignment: qid
+  weight: 45                 # gold_mention mode only; unused for candidate
+  source: mean
+
+loss:
+  a: 1.0
+  b: 1.0
+  c: 1.0
+
+train:
+  batch_size: 64             # ablation: 16 -> 64 is a large win (more in-batch negatives)
+  eval_batch_size: 16
+  learning_rate: 2.0e-5      # ablation: 1e-5 -> 2e-5 wins at this batch size
+  graph_learning_rate: 0.0008
+  num_epochs: 12             # with early stopping; best epochs land at 4-8
+  warmup_proportion: 0.1
+  max_grad_norm: 1.0
+  type_optimization: all_encoder_layers
+  shuffle: true              # standard practice; baseline.yaml trains unshuffled
+  print_interval: 10
+  eval_interval: 100
+  reseed_each_batch: false
+  early_stopping:
+    enabled: true
+    patience: 3              # epochs without valid in-batch improvement
+  pool_loss:
+    enabled: true            # retrieval CE against the full training-year pool
+    weight: 0.3              # 1.0 overfits the train-year pool when fusion is on
+
+eval:
+  batch_size: 256        # scoring batch (no in-batch coupling; any size gives identical results)
+  encode_batch_size: 128 # pool/validation encoding batch (64 already saturates throughput; larger only raises memory risk)
+  top_k: 64

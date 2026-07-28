@@ -1,0 +1,80 @@
+# Plain baseline without the paper's contributions, for controlled
+# comparison. Two deliberately simple behaviors distinguish it from
+# paper.yaml and default.yaml:
+#   * fusion.alignment: sequential — batches receive graph embeddings of
+#     nodes [step*B, (step+1)*B), unrelated to the batch's actual entities;
+#   * fusion.projection: random_frozen — the 64→512 projection is randomly
+#     initialized and never trained.
+# The graph inputs are the published 2015 preprocessed arrays (06_samples),
+# used for every experiment year, and the HeCo module is pretrained
+# separately (two-stage), not jointly optimized.
+
+run:
+  seed: 52313            # BLINK default
+  output_dir: outputs
+  tf32: true
+  amp: "off"
+
+data:
+  root: data
+  entity_set: new        # new | continual (override on the CLI)
+  train_year: 2019       # override on the CLI
+  max_context_length: 128
+  max_cand_length: 128
+  candidate_include_title: false   # eval pool encodes descriptions only, no titles
+  debug_n: null
+
+model:
+  bert_model: google/bert_uncased_L-8_H-512_A-8
+  lowercase: true
+
+graph:
+  enabled: true
+  source: samples2015
+  mode: heco_pretrain
+  hidden_dim: 64
+  feat_drop: 0.3
+  attn_drop: 0.5
+  tau: 0.8
+  lam: 0.5
+  sample_rate: [7, 1]
+  pretrain:
+    seed: 0              # the HeCo pretraining path reseeds everything to 0
+    lr: 0.0008
+    weight_decay: 0.0
+    patience: 5
+    max_epochs: 10000
+
+fusion:
+  enabled: true
+  projection: random_frozen
+  alignment: sequential
+  weight: 45             # fixed fusion weight for this setup
+  source: rel            # HeCo get_embeds() returns the meta-path (GCN) view
+
+loss:
+  a: 1.0                 # only L_e is optimized in the two-stage setup
+  b: 0.0
+  c: 0.0
+
+train:
+  batch_size: 16
+  eval_batch_size: 16
+  learning_rate: 1.0e-5
+  graph_learning_rate: 0.0008
+  num_epochs: 1
+  warmup_proportion: 0.1
+  max_grad_norm: 1.0
+  type_optimization: all_encoder_layers
+  shuffle: false
+  print_interval: 10
+  eval_interval: 100
+  reseed_each_batch: true   # reset global seeds every batch (fixed dropout masks)
+  early_stopping:
+    enabled: false
+    patience: 1
+
+eval:
+  batch_size: 256        # scoring batch (no in-batch coupling; any size gives identical results)
+  encode_batch_size: 128 # pool/validation encoding batch (64 already saturates throughput; larger only raises memory risk)
+  top_k: 64

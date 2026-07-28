@@ -1,0 +1,76 @@
+# Faithful-to-the-paper implementation (Sections 5.1-5.4):
+#   * per-year graphs; cross-year positives/negatives from relation-edge
+#     changes vs the previous year (Eq. 10/11), computed in QID space;
+#   * attention neighbor aggregation per graph (Eq. 6/7) with per-epoch
+#     neighbor sampling; shared ELU MLP projection (Eq. 8/9);
+#   * cross-view InfoNCE L_f / L_r with P∪N denominators (Eq. 13/14);
+#   * joint objective L = a·L_e + b·L_f + c·L_r (Eq. 15).
+# Choices the paper leaves unspecified (loss weights, fusion mechanism,
+# projection dimensionality, negative handling for L_r) are kept
+# configurable here.
+
+run:
+  seed: 52313
+  output_dir: outputs
+  tf32: true
+  amp: "off"
+
+data:
+  root: data
+  entity_set: new
+  train_year: 2019
+  max_context_length: 128
+  max_cand_length: 128
+  candidate_include_title: true    # Eq. 2: candidates are title [ENT] description
+  debug_n: null
+
+model:
+  bert_model: google/bert_uncased_L-8_H-512_A-8
+  lowercase: true
+
+graph:
+  enabled: true
+  source: per_year
+  mode: joint
+  hidden_dim: 64
+  feat_drop: 0.3
+  attn_drop: 0.5
+  tau: 0.8
+  neighbor_threshold: 8      # Eq. 6/7 sampling threshold (paper: unspecified)
+  isolated_fallback: self    # nodes with no relation edges keep own features
+  feature_negatives: all       # Eq. 14: N_f = all non-neighbors (chunked)
+  relation_extra_negatives: 0  # Eq. 11 negatives are empty in GCL-TempEL; >0 samples extra L_f denominators
+
+fusion:
+  enabled: true              # the paper does not specify how graph embeddings
+  projection: learned        # reach the EL scores; we use an additive
+  alignment: qid             # tanh-fusion, QID-aligned and trained
+  weight: 45
+  source: mean               # fuse (z_r + z_f)/2
+
+loss:
+  a: 1.0                     # Eq. 15 weights (paper: unspecified)
+  b: 1.0
+  c: 1.0
+
+train:
+  batch_size: 16
+  eval_batch_size: 16
+  learning_rate: 1.0e-5
+  graph_learning_rate: 0.0008
+  num_epochs: 1
+  warmup_proportion: 0.1
+  max_grad_norm: 1.0
+  type_optimization: all_encoder_layers
+  shuffle: false
+  print_interval: 10
+  eval_interval: 100
+  reseed_each_batch: false
+  early_stopping:
+    enabled: false
+    patience: 1
+
+eval:
+  batch_size: 256        # scoring batch (no in-batch coupling; any size gives identical results)
+  encode_batch_size: 128 # pool/validation encoding batch (64 already saturates throughput; larger only raises memory risk)
+  top_k: 64
